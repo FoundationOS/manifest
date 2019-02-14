@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+  <remote  name="poky"
+    fetch="git://git.yoctoproject.org" />
+
+  <remote  name="github"
+    fetch="https://github.com" />
+
+  <remote  name="openembedded"
+    fetch="git://git.openembedded.org" />
+
+  <default revision="pyro"/>
+
+  <!-- project dirs -->
+  <project path="build" name="FoundationOS/build" remote="github" revision="master" />
+
+  <!-- poky dirs -->
+  <project path="platform/yocto/poky" name="poky.git" remote="poky"/>
+  <project path="platform/yocto/meta-openembedded" name="meta-openembedded.git" remote="openembedded" />
+
+  <!-- Foundation OS base layer -->
+  <project path="platform/yocto/meta-foundationos" name="FoundationOS/meta-foundationos" remote="github" revision="master" />
+
+  <!-- qemu adaptation layer -->
+  <project path="platform/yocto/meta-foundationos-qemu" name="FoundationOS/meta-foundationos-qemu" remote="github" revision="master" />
+
+  <!-- FoundationOS Raspberrypi adaptation layer -->
+  <project path="platform/yocto/meta-raspberrypi" name="meta-raspberrypi" remote="poky" groups="notdefault,rpi"/> 
+  <project path="platform/yocto/meta-foundationos-raspberrypi" name="FoundationOS/meta-foundationos-raspberrypi" remote="github" revision="master" groups="notdefault,rpi"/>
+</manifest>
