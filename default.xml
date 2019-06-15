@@ -27,4 +27,8 @@
   <!-- FoundationOS Raspberrypi adaptation layer -->
   <project path="platform/yocto/meta-raspberrypi" name="meta-raspberrypi" remote="poky" groups="notdefault,rpi"/> 
   <project path="platform/yocto/meta-foundationos-raspberrypi" name="FoundationOS/meta-foundationos-raspberrypi" remote="github" revision="master" groups="notdefault,rpi"/>
+
+   <!-- FoundationOS LibreComputer adaptation layer -->
+   <project path="platform/yocto/meta-sunxi" name="linux-sunxi/meta-sunxi" remote="github" revision="thud" groups="nodefault,sunxi" />
+   <project path="platform/yocto/meta-foundationos-sunxi" name="FoundationOS/meta-foundationos-sunxi" remote="github" revision="master" groups="nodefault,sunxi" />
 </manifest>
